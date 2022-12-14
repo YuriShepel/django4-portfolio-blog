@@ -11,7 +11,7 @@
             <div class="col-md-10">
                 <a href="{% url 'blog:detail' post.id %}"><h2>{{ post.title }}</h2></a>
                 <h5 class="text-muted">{{ post.date|date:'d M Y' }}</h5>
-                <h4>{{ post.content|truncatechars:200 }}</h4>
+                <h4>{{ post.content|safe|truncatechars:200 }}</h4>
             </div>
         </div>
     {% endfor %}
