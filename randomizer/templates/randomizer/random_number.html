@@ -1,0 +1,18 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+        <div>
+            <h1>Random number:</h1>
+            <h2 class="alert alert-success">{{ random_number }}</h2>
+        </div>
+        <div>
+            <h4>
+            <a href="{% url 'randomizer:number_generator' %}" class="btn btn-warning">Generate new number</a>
+            </h4>
+        </div>
+ </div>
+
+{% endblock %}

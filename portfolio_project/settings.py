@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'portfolio',
     'ckeditor',
     'password_generator',
+    'randomizer',
 ]
 
 MIDDLEWARE = [

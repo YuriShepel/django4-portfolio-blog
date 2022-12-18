@@ -1,0 +1,30 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+    <div>
+         <h1>Generate random number</h1>
+    </div>
+    <div>
+        <h2>Select range:</h2>
+    </div>
+    <div class="mt-3">
+        <form action="{% url 'randomizer:number' %}">
+            <p>From</p>
+            <div class="mt-2">
+                <input type="number" name="first_number" value="1" min="0">
+            </div>
+            <p>to</p>
+            <div class="mt-2">
+                <input type="number" name="second_number" value="0" min="0">
+            </div>
+            <div class="mt-2">
+                <input type="submit" value="Generate number" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+    <div class="mt-2">{{ error }}</div>
+</div>
+{% endblock %}
