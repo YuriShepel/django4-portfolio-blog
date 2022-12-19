@@ -1,0 +1,25 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+    <div>
+         <h1>Link shortener</h1>
+    </div>
+    <div>
+        <h2>Please, enter your link</h2>
+    </div>
+    <div class="mt-3">
+        <form action="{% url 'shortener:short_link' %}">
+            <div class="mt-2">
+                <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required>
+            </div>
+            <div class="mt-2">
+                <input type="submit" value="Short" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+    <div class="mt-2">{{ error }}</div>
+</div>
+{% endblock %}

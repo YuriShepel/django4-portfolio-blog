@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'password_generator',
     'randomizer',
+    'shortener',
 ]
 
 MIDDLEWARE = [

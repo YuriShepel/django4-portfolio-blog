@@ -26,6 +26,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('generator/', include('password_generator.urls')),
     path('randomizer/', include('randomizer.urls')),
+    path('shortener/', include('shortener.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
