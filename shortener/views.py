@@ -1,5 +1,4 @@
 import pyshorteners
-import pyperclip
 
 from django.shortcuts import render
 
@@ -12,5 +11,4 @@ def short_link(request):
     link = request.GET.get('url')
     shortener = pyshorteners.Shortener()
     short_link = shortener.tinyurl.short(link)
-    pyperclip.copy(short_link)
     return render(request, 'shortener/shorted_link.html', {'short_link': short_link})
