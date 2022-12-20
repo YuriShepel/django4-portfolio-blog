@@ -4,4 +4,25 @@
     <h1 class="text-center mt-5" id="blogdetailtitle">{{ post.title }}</h1>
     <h2 class="text-center text-muted mb5">{{ post.date|date:"F jS Y" }}</h2>
     {{ post.content|safe }}
+    <hr>
+    <div class="text-left mt-3">
+        <h3>Оставить комментарий</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <textarea name="text" rows="4" cols="50" ></textarea>
+             </div>
+            <div class="mt-1">
+                <lable>Ваше имя*</lable>
+                <input type="text" name="name">
+             </div>
+                <div class="mt-1">
+                <lable>Ваш email*</lable>
+                <input type="email" name="email">
+             </div>
+                <div class="mt-1 mb-3">
+                <input type="submit" name="" id="">
+             </div>
+        </form>
+    </div>
 {% endblock %}
